@@ -25,7 +25,7 @@ func (t *templateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 			log.Fatal(err)
 		}
 		fmt.Println("current working directory: ", dir)
-		t.templ = template.Must(template.ParseFiles(filepath.Join("chapter1/chat/templates", t.filename)))
+		t.templ = template.Must(template.ParseFiles(filepath.Join("templates", t.filename)))
 	})
 	t.templ.Execute(w, nil)
 }
